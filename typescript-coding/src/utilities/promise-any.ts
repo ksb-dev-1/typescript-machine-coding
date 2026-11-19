@@ -1,4 +1,4 @@
-function promiseAny<T>(promises: Array<T>): Promise<T> {
+function promiseAny<T>(promises: Array<T>): Promise<Awaited<T>> {
   return new Promise((resolve, reject) => {
     const errors: string[] = [];
     let rejectedCount = 0;
